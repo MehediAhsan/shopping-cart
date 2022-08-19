@@ -8,6 +8,7 @@ function updatePhoneNumber (isIncrease){
     else{
         newPhoneNumber = previousPhoneNumber - 1;
     }
+    
     phoneNumberField.value = newPhoneNumber;
     return newPhoneNumber;
 }
