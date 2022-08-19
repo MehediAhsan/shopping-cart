@@ -8,7 +8,12 @@ function updatePhoneNumber (isIncrease){
     else{
         newPhoneNumber = previousPhoneNumber - 1;
     }
-    
+    if(newPhoneNumber>=0){
+        document.getElementsByClassName('btn-phone-minus').disabled = true;
+    }
+    else{
+        document.getElementsByClassName('btn-phone-minus').removeAttribute('disabled');
+    }
     phoneNumberField.value = newPhoneNumber;
     return newPhoneNumber;
 }

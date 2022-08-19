@@ -8,6 +8,12 @@ function updateCaseNumber(isIncrease){
     else{
         newCaseNumber = previousCaseNumber - 1;
     }
+    if(newCaseNumber>=0){
+        document.getElementsByClassName('btn-case-minus').disabled = true;
+    }
+    else{
+        document.getElementsByClassName('btn-case-minus').removeAttribute('disabled');
+    }
     caseNumberField.value = newCaseNumber;
     return newCaseNumber;
 }

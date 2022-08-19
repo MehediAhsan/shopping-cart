@@ -47,10 +47,3 @@ body{
 .status{
 	text-align: right;
 }
-.check-out{
-    float: right;
-    padding: 10px 30px;
-	font-size: 19px;
-	background-color: #2FBE70;
-	border: none;
-}

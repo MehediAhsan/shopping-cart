@@ -25,5 +25,24 @@ function calculateSubTotal(){
     setTextElementValueById('final-total', finalAmount);
 
     setTextElementValueById('total-price', finalAmount);
+       
 }
+
+
+document.getElementById('discount-field').addEventListener('keyup', function(event){
+    const discountText = event.target.value;
+    console.log(discountText);
+    discountButton = document.getElementById('discount-btn');
+    if(discountText === 'discount'){
+        discountButton.removeAttribute('disabled');
+    }
+    else{
+        discountButton.setAttribute('disabled',true);
+    }
+    discountButton.addEventListener('click', function(){
+        const totalPrice = document.getElementById('total-price').innerText;
+        const discountPrice = totalPrice * 0.8;
+        document.getElementById('discount-price').innerText = '$'+discountPrice;
+    });
+});
 

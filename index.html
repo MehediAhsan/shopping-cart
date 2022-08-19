@@ -76,9 +76,12 @@
                </div>
                <div class="col-md-12 pt-4 pb-4">
                   <!-- Button trigger modal -->
-                  <button type="button" class="btn btn-success check-out" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                     Check Out
-                  </button>
+                  <div class="d-flex justify-content-between align-items-center">
+                     <img class="w-25" src="https://cdn.pixabay.com/photo/2017/09/26/19/58/discount-2789869_960_720.png" alt="">
+                     <button type="button" class="btn btn-danger mt-4 px-3 py-2 fw-semibold fs-4 h-25" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Check Out Now
+                     </button>
+                  </div>
 
                   <!-- Modal -->
                   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -92,10 +95,14 @@
                            </div>
                            <div class="modal-body">
                               <h3>Total Price: $<span id="total-price">1405.8</span></h3>
-                              please send money our bkash account
+                              
+                              <input id="discount-field" class="form-control w-50 my-1" type="text" placeholder="type discount" aria-label="default input example">
+                              <button id="discount-btn" type="button" class="btn btn-success" disabled>Apply</button>
+
+                              <h3>Discount Price: <span id="discount-price"></span></h3>
                            </div>
                            <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                              <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
                            </div>
                         </div>
                      </div>
